@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Halfway!</string>
+    <string name="goodMorning">Good Morning,</string>
+    <string name="goodAfternoon">Good Afternoon,</string>
+    <string name="location">Location</string>
+    <string name="yourLocation">Your Location</string>
+    <string name="friendsLocation">Friend\'s Location</string>
+    <string name="radius">Radius</string>
+    <string name="find">Find</string>
+</resources>
