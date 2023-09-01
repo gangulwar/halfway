@@ -8,4 +8,7 @@
     <string name="radius">Radius</string>
     <string name="find">Find</string>
     <string name="diningAndDrinking">Dining and Drinking</string>
+    <string name="landmarksAndOutdoors">Landmarks and Outdoors</string>
+    <string name="entertainment">Entertainment</string>
+
 </resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/diningAndDrinkingLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/border_radius"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:padding="10dp"
+            android:src="@drawable/dining2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/dm_sans"
+            android:text="@string/diningAndDrinking"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/entertainmentLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/border_radius"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:padding="10dp"
+            android:src="@drawable/landmark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/dm_sans"
+            android:text="@string/landmarksAndOutdoors"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/landmarksAndOutdoorsLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/border_radius"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:padding="10dp"
+            android:src="@drawable/entertainment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/dm_sans"
+            android:text="@string/entertainment"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="375dp"
+        android:layout_height="75dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/border_radius"
+        android:drawableLeft="@drawable/dining_and_drinking"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="@string/diningAndDrinking"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="375dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/border_radius"
+        android:drawableLeft="@drawable/dining_and_drinking"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/dm_sans_medium"
+        android:text="Landmarks and Outdoors"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+
+</LinearLayout>
