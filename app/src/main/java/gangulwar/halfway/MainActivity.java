@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     TextView yourLocationTextView;
     TextView friendsLocationTextView;
     TextView greeting;
+    Button findButton;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -52,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
         yourLocationTextView = findViewById(R.id.yourLocation);
         friendsLocationTextView = findViewById(R.id.friendLocation);
 
+        findButton = findViewById(R.id.findButton);
+
+        findButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PlaceListActivity.class);
+                startActivity(intent);
+            }
+        });
         slider.setValue(2300);
         slider.setValueFrom(100);
         slider.setValueTo(10000);
@@ -134,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putInt("key",1);
+                bundle.putInt("key", 1);
 
                 SelectLocationFragment mapFragment = new SelectLocationFragment();
                 mapFragment.setArguments(bundle);
@@ -151,10 +163,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Bundle bundle = new Bundle();
-                bundle.putInt("key",2);
+                bundle.putInt("key", 2);
 
                 SelectLocationFragment mapFragment = new SelectLocationFragment();
-               mapFragment.setArguments(bundle);
+                mapFragment.setArguments(bundle);
 
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.mapContainer, mapFragment)
@@ -171,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 yourLocationTextView.setText(coordinates);
             } else if (key == 2) {
                 friendsLocationTextView.setText(coordinates);
-            }else{
+            } else {
                 System.out.println("ERRORRRRRRRR");
                 System.out.println(key);
             }

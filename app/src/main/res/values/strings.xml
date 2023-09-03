@@ -11,4 +11,10 @@
     <string name="landmarksAndOutdoors">Landmarks and Outdoors</string>
     <string name="entertainment">Entertainment</string>
     <string name="clickHere">Click Here to select location</string>
+    <string name="allPlaces">All Places,</string>
+    <string name="name">Name</string>
+    <string name="type">(Type)</string>
+    <string name="distance_from">Distance from Middle Point</string>
+    <string name="distance_meters">100 Meters</string>
+    <string name="view_map">View On Map</string>
 </resources>
