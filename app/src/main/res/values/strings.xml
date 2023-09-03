@@ -10,5 +10,5 @@
     <string name="diningAndDrinking">Dining and Drinking</string>
     <string name="landmarksAndOutdoors">Landmarks and Outdoors</string>
     <string name="entertainment">Entertainment</string>
-
+    <string name="clickHere">Click Here to select location</string>
 </resources>
