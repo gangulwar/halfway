@@ -1,15 +1,19 @@
 package gangulwar.halfway;
 
 public class PlaceModal {
-    String name;
-    String type;
-    String distanceFromMiddle;
-    String iconLink;
+    String nameOfPlace;
+    String typeOfPlace;
+    String iconUrl;
+    int distance;
+    double lat;
+    double lon;
 
-    public PlaceModal(String name, String type, String distanceFromMiddle, String iconLink) {
-        this.name = name;
-        this.type = type;
-        this.distanceFromMiddle = distanceFromMiddle;
-        this.iconLink = iconLink;
+    public PlaceModal(String nameOfPlace, String typeOfPlace, String iconUrl, int distance, double lat, double lon) {
+        this.nameOfPlace = nameOfPlace;
+        this.typeOfPlace = typeOfPlace;
+        this.iconUrl = iconUrl;
+        this.distance = distance;
+        this.lat = lat;
+        this.lon = lon;
     }
 }

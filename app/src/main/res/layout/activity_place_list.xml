@@ -37,11 +37,26 @@
         android:textSize="35sp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:id="@+id/recyclerView"/>
+        android:layout_marginEnd="10dp" />
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/loadingLayout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:visibility="gone">-->
+
+    <!--        &lt;!&ndash; You can use an ImageView for a loader image or a ProgressBar &ndash;&gt;-->
+    <!--        <ImageView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:src="@drawable/loading"-->
+    <!--        android:contentDescription="Loading" />-->
+    <!--    </FrameLayout>-->
 
 </LinearLayout>

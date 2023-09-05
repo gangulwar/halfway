@@ -2,6 +2,7 @@ package gangulwar.halfway;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,18 +39,31 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
     @Override
     public void onBindViewHolder(@NonNull PlaceListAdapter.ViewHolder holder, int position) {
 
-        String imageUrl = arrayList.get(position).iconLink;
-        String nameOfPlace = arrayList.get(position).name;
-        String typeOfPlace = arrayList.get(position).type;
-        String distanceFromMiddle = arrayList.get(position).distanceFromMiddle;
+        String imageUrl = arrayList.get(position).iconUrl;
+        String nameOfPlace = arrayList.get(position).nameOfPlace;
+        String typeOfPlace = arrayList.get(position).typeOfPlace;
+        String distanceFromMiddle = arrayList.get(position).distance + " meters";
 
         Picasso.get()
                 .load(imageUrl)
-                .placeholder(R.drawable.entertainment)
-                .error(R.drawable.icon)
+                .placeholder(R.drawable.loading)
+                .error(R.drawable.loading)
                 .into(holder.icon);
 
+//        if (nameOfPlace.length() > 15) {
+//            holder.name.setTextSize(TypedValue.COMPLEX_UNIT_SP, 26);
+//        } else {
+//            holder.name.setTextSize(TypedValue.COMPLEX_UNIT_SP, 35);
+//        }
+        changeTextSize(holder.name, nameOfPlace, 1);
         holder.name.setText(nameOfPlace);
+        changeTextSize(holder.type, typeOfPlace, 2);
+//        if (typeOfPlace.length() > 15) {
+//            holder.type.setTextSize(TypedValue.COMPLEX_UNIT_SP,18 );
+//        } else {
+//            holder.type.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+//        }
+
         holder.type.setText(typeOfPlace);
         holder.distance.setText(distanceFromMiddle);
 
@@ -77,11 +91,15 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
         }
     }
 
-    public static void shortIt(String txt, ViewHolder holder) {
-
-        if (txt.length() > 14) {
-
+    public static void changeTextSize(TextView textView, String text, int flag) {
+        if (flag == 1) {
+            if (text.length() > 15) {
+                textView.setTextSize(25);
+            }
+        } else {
+            if (text.length() > 15) {
+                textView.setTextSize(18);
+            }
         }
-
     }
 }

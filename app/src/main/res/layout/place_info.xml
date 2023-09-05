@@ -1,92 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!--    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="3dp"-->
+<!--        android:background="@drawable/card_radius"-->
+<!--    android:elevation="10dp">-->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="3dp">
+    android:layout_margin="5dp"
+    android:background="@drawable/card_radius"
+    android:orientation="horizontal">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:background="@color/black"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/circular" />
+    <!--            android:src="@drawable/icon"-->
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/card"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="10dp"
-            android:background="@color/black"
-            android:scaleType="centerCrop"
-            app:shapeAppearanceOverlay="@style/circular"
-            android:id="@+id/icon"
-            />
-<!--            android:src="@drawable/icon"-->
+        <TextView
+            android:id="@+id/nameOfPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/dm_sans_bold"
+            android:text="@string/name"
+            android:textSize="35sp" />
 
+        <TextView
+            android:id="@+id/typeOfPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:text="@string/type"
+            android:textSize="25sp" />
 
-        <LinearLayout
+        <View
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:text="@string/distance_from"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/distanceFromMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="@string/distance_meters"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/viewMap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:gravity="end"
+            android:text="@string/view_map" />
 
-            <TextView
-                android:id="@+id/nameOfPlace"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/dm_sans"
-                android:text="@string/name"
-                android:textSize="35sp"
-                />
-
-            <TextView
-                android:id="@+id/typeOfPlace"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/dm_sans"
-                android:text="@string/type"
-                android:textSize="25sp" />
-
-            <View
-                android:layout_width="250dp"
-                android:layout_height="2dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="8dp"
-                android:background="@android:color/black" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/dm_sans"
-                android:text="@string/distance_from"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/distanceFromMiddle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/dm_sans_medium"
-                android:text="@string/distance_meters"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/viewMap"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/dm_sans_medium"
-                android:gravity="end"
-                android:text="@string/view_map" />
-
-        </LinearLayout>
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</LinearLayout><!--    </androidx.cardview.widget.CardView>-->

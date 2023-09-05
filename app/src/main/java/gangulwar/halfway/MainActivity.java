@@ -35,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
     TextView friendsLocationTextView;
     TextView greeting;
     Button findButton;
+    double yourLocationLAT;
+    double yourLocationLON;
+    double friendsLocationLAT;
+    double friendsLocationLON;
+    int radius;
+    int choice;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -61,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PlaceListActivity.class);
+                Bundle bundle = new Bundle();
+
+                bundle.putDouble("middleLAT", (yourLocationLAT + friendsLocationLAT) / 2);
+                bundle.putDouble("middleLON", (yourLocationLON + friendsLocationLON) / 2);
+                bundle.putInt("radius", radius);
+                bundle.putInt("choice", isDiningClicked ? 1 : (isLandmarkClicked ? 2 : 3));
+                intent.putExtra("bundle", bundle);
                 startActivity(intent);
             }
         });
@@ -76,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 slider.setValue(snappedValue);
                 String txt;
                 radiusValue.setText(String.valueOf(snappedValue));
+                radius = snappedValue;
             }
         });
 
@@ -181,8 +195,12 @@ public class MainActivity extends AppCompatActivity {
             String coordinates = "Latitude: " + selectedLatLng.latitude + ", Longitude: " + selectedLatLng.longitude;
             if (key == 1) {
                 yourLocationTextView.setText(coordinates);
+                yourLocationLAT = selectedLatLng.latitude;
+                yourLocationLON = selectedLatLng.longitude;
             } else if (key == 2) {
                 friendsLocationTextView.setText(coordinates);
+                friendsLocationLAT = selectedLatLng.latitude;
+                friendsLocationLON = selectedLatLng.longitude;
             } else {
                 System.out.println("ERRORRRRRRRR");
                 System.out.println(key);
@@ -206,6 +224,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             greeting = "Good Night,";
         }
-        return greeting;
+//        return greeting;
+        return "Hello Aarsh!";
     }
+
+    public static String getAllData;
 }
