@@ -71,8 +71,20 @@ public class MainActivity extends AppCompatActivity {
 
                 bundle.putDouble("middleLAT", (yourLocationLAT + friendsLocationLAT) / 2);
                 bundle.putDouble("middleLON", (yourLocationLON + friendsLocationLON) / 2);
+                System.out.println("MIddle\nLAT=" + (yourLocationLAT + friendsLocationLAT) / 2 + "\nLON=" + (yourLocationLON + friendsLocationLON) / 2);
                 bundle.putInt("radius", radius);
-                bundle.putInt("choice", isDiningClicked ? 1 : (isLandmarkClicked ? 2 : 3));
+                System.out.println("RADIUS=" + radius);
+                int choice = 0;
+                if (isDiningClicked) {
+                    choice = 1;
+                } else if (isLandmarkClicked) {
+                    choice = 2;
+                } else {
+                    choice = 3;
+                }
+                //isDiningClicked ? 1 : (isLandmarkClicked ? 2 : 3)
+                bundle.putInt("choice", choice);
+                System.out.println("isDining=" + isDiningClicked + " isLandmark=" + isLandmarkClicked + " isEntertainment=" + isEntertainmentClicked);
                 intent.putExtra("bundle", bundle);
                 startActivity(intent);
             }
@@ -224,9 +236,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             greeting = "Good Night,";
         }
-//        return greeting;
-        return "Hello Aarsh!";
+        return greeting;
     }
-
-    public static String getAllData;
 }

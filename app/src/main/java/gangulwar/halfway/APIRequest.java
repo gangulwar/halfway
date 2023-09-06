@@ -14,7 +14,7 @@ import okhttp3.Response;
 public class APIRequest {
 
     public static ArrayList<PlaceModal> APIRequest(String lat, String lon, String radius, int category) {
-
+        System.out.println("NEW REQUEST...\nLAT,LAN=" + lat + "," + lon + "\nRADIUS" + radius + "\nCATEGORY=" + category);
         OkHttpClient client = new OkHttpClient();
         String API_BASE_URL = "https://api.foursquare.com/v3/places/search?";
         String API_KEY = "API_KEY";

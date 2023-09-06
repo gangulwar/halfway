@@ -2,6 +2,7 @@ package gangulwar.halfway;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,6 +67,22 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
 
         holder.type.setText(typeOfPlace);
         holder.distance.setText(distanceFromMiddle);
+        TextView textView = holder.viewOnMap;
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("MAP STARTING...");
+                Uri gmmIntentUri = Uri.parse("google.navigation:q=" + arrayList.get(position).lat + "," + arrayList.get(position).lon);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+
+                mapIntent.setPackage("com.google.android.apps.maps");
+
+
+                if (mapIntent.resolveActivity(context.getPackageManager()) != null) {
+                    context.startActivity(mapIntent);
+                }
+            }
+        });
 
     }
 
@@ -80,6 +97,7 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
         TextView name;
         TextView type;
         TextView distance;
+        TextView viewOnMap;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -88,6 +106,7 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
             name = itemView.findViewById(R.id.nameOfPlace);
             type = itemView.findViewById(R.id.typeOfPlace);
             distance = itemView.findViewById(R.id.distanceFromMiddle);
+            viewOnMap = itemView.findViewById(R.id.viewMap);
         }
     }
 

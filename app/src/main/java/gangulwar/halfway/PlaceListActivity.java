@@ -71,56 +71,77 @@ public class PlaceListActivity extends AppCompatActivity {
         String lat = String.valueOf(bundle.getDouble("middleLAT"));
         String lon = String.valueOf(bundle.getDouble("middleLON"));
         String radius = String.valueOf(bundle.getInt("radius"));
-        int category;
+        int bundleCategory = bundle.getInt("choice");
+        int category = 0;
 
-        switch (bundle.getInt("category")) {
-            case 1:
-                category = 13000;
-                break;
-            case 2:
-                category = 16000;
-                break;
-            case 3:
-                category = 10000;
-                break;
-            default:
-                category = 0;
+        if (bundleCategory == 1) {
+            category = 13000;
+        } else if (bundleCategory == 2) {
+            category = 16000;
+        } else if (bundleCategory == 3) {
+            category = 10000;
         }
 
-        new APITask().execute(lat, lon, radius, String.valueOf(category));
+        int finalCategory = category;
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // Perform your API request here
+                ArrayList<PlaceModal> arrayList = APIRequest.APIRequest(lat, lon, radius, finalCategory);
 
+                // Update the UI with the result on the main thread (if needed)
+                for (int i = 0; i < arrayList.size(); i++) {
+                    System.out.println(arrayList.get(i).nameOfPlace + "\n");
+                }
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        RecyclerView places = findViewById(R.id.recyclerView);
+                        places.setLayoutManager(new LinearLayoutManager(PlaceListActivity.this, LinearLayoutManager.VERTICAL, false));
+                        PlaceListAdapter placeListAdapter = new PlaceListAdapter(PlaceListActivity.this, arrayList);
+                        places.setAdapter(placeListAdapter);
+                    }
+                });
+            }
+        }).start();
     }
 
-    private class APITask extends AsyncTask<String, Void, ArrayList<PlaceModal>> {
-
+//    private class APITask extends AsyncTask<String, Void, ArrayList<PlaceModal>> {
+//
+////        @Override
+////        protected void onPreExecute() {
+////            super.onPreExecute();
+////            // Show the loading view
+////            findViewById(R.id.loadingLayout).setVisibility(View.VISIBLE);
+////        }
+//
 //        @Override
-//        protected void onPreExecute() {
-//            super.onPreExecute();
-//            // Show the loading view
-//            findViewById(R.id.loadingLayout).setVisibility(View.VISIBLE);
+//        protected ArrayList<PlaceModal> doInBackground(String... params) {
+//            String lat = params[0];
+//            String lon = params[1];
+//            String radius = params[2];
+//            int category = Integer.parseInt(params[3]);
+//            APIRequest apiRequest = new APIRequest();
+//            return apiRequest.APIRequest(lat, lon, radius, category);
 //        }
+//
+//        @Override
+//        protected void onPostExecute(ArrayList<PlaceModal> placeModalArrayList) {
+//            super.onPostExecute(placeModalArrayList);
+//
+//            //findViewById(R.id.loadingLayout).setVisibility(View.GONE);
+//            // Update your UI with the received data
+//            System.out.println(placeModalArrayList);
+//            RecyclerView places = findViewById(R.id.recyclerView);
+//            places.setLayoutManager(new LinearLayoutManager(PlaceListActivity.this, LinearLayoutManager.VERTICAL, false));
+//            PlaceListAdapter placeListAdapter = new PlaceListAdapter(PlaceListActivity.this, placeModalArrayList);
+//            places.setAdapter(placeListAdapter);
+//        }
+//    }
 
-        @Override
-        protected ArrayList<PlaceModal> doInBackground(String... params) {
-            String lat = params[0];
-            String lon = params[1];
-            String radius = params[2];
-            int category = Integer.parseInt(params[3]);
-
-            return APIRequest.APIRequest(lat, lon, radius, category);
-        }
-
-        @Override
-        protected void onPostExecute(ArrayList<PlaceModal> placeModalArrayList) {
-            super.onPostExecute(placeModalArrayList);
-
-            //findViewById(R.id.loadingLayout).setVisibility(View.GONE);
-            // Update your UI with the received data
-            System.out.println(placeModalArrayList);
-            RecyclerView places = findViewById(R.id.recyclerView);
-            places.setLayoutManager(new LinearLayoutManager(PlaceListActivity.this, LinearLayoutManager.VERTICAL, false));
-            PlaceListAdapter placeListAdapter = new PlaceListAdapter(PlaceListActivity.this, placeModalArrayList);
-            places.setAdapter(placeListAdapter);
-        }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
