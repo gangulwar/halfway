@@ -164,7 +164,11 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:valueFrom="100"
-                    android:valueTo="10000" />
+                    android:valueTo="10000"
+                    app:labelBehavior="gone"
+                    app:thumbColor="@color/location"
+                    app:trackColor="@color/track_color"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"

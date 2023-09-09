@@ -6,4 +6,7 @@
     <color name="buttonBefore">#F5F5F5</color>
     <color name="location">#9D9D9D</color>
     <color name="card">#D9D9D9</color>
+    <color name="green">#00FF99</color>
+    <color name="track_color">#C4C4C4</color>
+    <color name="blue">#0B40FF</color>
 </resources>

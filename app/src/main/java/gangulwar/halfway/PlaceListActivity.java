@@ -9,11 +9,19 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
 public class PlaceListActivity extends AppCompatActivity {
 
+    ImageView progressBar;
+    Context context;
+    TextView head;
 
     //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
@@ -67,11 +75,15 @@ public class PlaceListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_list);
 
+        head=findViewById(R.id.header_title);
+
         Bundle bundle = getIntent().getBundleExtra("bundle");
         String lat = String.valueOf(bundle.getDouble("middleLAT"));
         String lon = String.valueOf(bundle.getDouble("middleLON"));
         String radius = String.valueOf(bundle.getInt("radius"));
         int bundleCategory = bundle.getInt("choice");
+
+        head.setText(getCategoryName(bundleCategory));
         int category = 0;
 
         if (bundleCategory == 1) {
@@ -81,24 +93,39 @@ public class PlaceListActivity extends AppCompatActivity {
         } else if (bundleCategory == 3) {
             category = 10000;
         }
-
         int finalCategory = category;
+
+        progressBar = findViewById(R.id.progressBar);
+        Glide.with(this)
+                .asGif()
+                .load(R.drawable.loading)
+                .into(progressBar);
+
+        context = getApplicationContext();
+
         new Thread(new Runnable() {
             @Override
             public void run() {
-                // Perform your API request here
-                ArrayList<PlaceModal> arrayList = APIRequest.APIRequest(lat, lon, radius, finalCategory);
+                ArrayList<PlaceModal> arrayList = null;
+                try {
+                    arrayList = APIRequest.APIRequest(lat, lon, radius, finalCategory);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
 
-                // Update the UI with the result on the main thread (if needed)
                 for (int i = 0; i < arrayList.size(); i++) {
                     System.out.println(arrayList.get(i).nameOfPlace + "\n");
                 }
+                ArrayList<PlaceModal> finalArrayList = arrayList;
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        //ImageView progressBar = findViewById(R.id.progressBar);
+                        Glide.with(context).clear(progressBar);
+                        progressBar.setVisibility(View.INVISIBLE);
                         RecyclerView places = findViewById(R.id.recyclerView);
                         places.setLayoutManager(new LinearLayoutManager(PlaceListActivity.this, LinearLayoutManager.VERTICAL, false));
-                        PlaceListAdapter placeListAdapter = new PlaceListAdapter(PlaceListActivity.this, arrayList);
+                        PlaceListAdapter placeListAdapter = new PlaceListAdapter(PlaceListActivity.this, finalArrayList);
                         places.setAdapter(placeListAdapter);
                     }
                 });
@@ -143,5 +170,17 @@ public class PlaceListActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    private static String getCategoryName(int a) {
+        String txt;
+        if (a == 1) {
+            txt = "Dining and Drinking";
+        } else if (a == 2) {
+            txt = "Landmarks and Outdoors";
+        } else {
+            txt = "Entertainment";
+        }
+        return txt;
     }
 }
