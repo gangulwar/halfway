@@ -18,4 +18,29 @@
     <string name="distance_meters">100 Meters</string>
     <string name="view_map">View On Map</string>
     <string name="select_location">Select A Location</string>
+
+    <!--  dining and drinking fragment  -->
+    <string name="category_bar">Bar</string>
+    <string name="category_bakery">Bakery</string>
+    <string name="category_cafe">Cafe</string>
+    <string name="category_coffee_shop">Coffee Shop</string>
+    <string name="category_tea_room">Tea Room</string>
+    <string name="category_cafeteria">Cafeteria</string>
+    <string name="category_dessert_shop">Dessert Shop</string>
+    <string name="category_restaurant">Restaurant</string>
+    <string name="category_afgan">Afgan</string>
+    <string name="category_african">African</string>
+    <string name="category_american">American</string>
+    <string name="category_asian">Asian</string>
+    <string name="category_australian">Australian</string>
+    <string name="category_bangladeshi">Bangladeshi</string>
+    <string name="category_chinese">Chinese</string>
+    <string name="category_dutch">Dutch</string>
+    <string name="category_fast_food">Fast Food</string>
+    <string name="category_french">French</string>
+    <string name="category_indian">Indian</string>
+    <string name="category_italian">Italian</string>
+    <string name="category_mexican">Mexican</string>
+
+
 </resources>
