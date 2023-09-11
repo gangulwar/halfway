@@ -9,4 +9,5 @@
     <color name="green">#00FF99</color>
     <color name="track_color">#C4C4C4</color>
     <color name="blue">#0B40FF</color>
+    <color name="transparent">#CC3E3E</color>
 </resources>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SubCategoryFragment"
+    android:layout_gravity="center_vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:background="@drawable/nestedview_background"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/landmarksAndOutdoors"
+                android:textSize="55sp" />
+
+            <View
+                android:layout_width="275dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_canal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_canal"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_castle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_castle"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_dam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_dam"
+                    android:textSize="25sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_farm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_farm"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_forest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_forest"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_garden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_garden"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_hill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_hill"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_historic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_historic"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_lake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_lake"
+                    android:textSize="25sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_monument"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_monument"
+                    android:textSize="25sp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_park"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_park"
+                    android:textSize="25sp" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_river"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_river"
+                    android:textSize="25sp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_structure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_structure"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

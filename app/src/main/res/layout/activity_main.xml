@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:alpha=".1"/>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -167,8 +173,7 @@
                     android:valueTo="10000"
                     app:labelBehavior="gone"
                     app:thumbColor="@color/location"
-                    app:trackColor="@color/track_color"
-                    />
+                    app:trackColor="@color/track_color" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -311,6 +316,11 @@
 
     <FrameLayout
         android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/subCategory"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

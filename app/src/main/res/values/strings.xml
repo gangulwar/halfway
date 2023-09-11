@@ -42,5 +42,21 @@
     <string name="category_italian">Italian</string>
     <string name="category_mexican">Mexican</string>
 
+    <string name="restaurant">Restaurant</string>
+
+    <!--  Landmarks and Outdoors  -->
+    <string name="category_canal">Canal</string>
+    <string name="category_castle">Castle</string>
+    <string name="category_dam">Dam</string>
+    <string name="category_farm">Farm</string>
+    <string name="category_forest">Forest</string>
+    <string name="category_garden">Garden</string>
+    <string name="category_hill">Hill</string>
+    <string name="category_historic">Historic</string>
+    <string name="category_lake">Lake</string>
+    <string name="category_monument">Monument</string>
+    <string name="category_park">Park</string>
+    <string name="category_river">River</string>
+    <string name="category_structure">Structure</string>
 
 </resources>

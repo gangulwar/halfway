@@ -11,24 +11,16 @@ import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.slider.Slider;
 
-import java.sql.SQLOutput;
 import java.util.Calendar;
 
 import android.Manifest;
@@ -142,6 +134,20 @@ public class MainActivity extends AppCompatActivity {
                     entertainmentLL.setBackground(drawable1);
                     isEntertainmentClicked = false;
                     isLandmarkClicked = false;
+
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("key", 1);
+
+                    SubCategoryFragment fragment = new SubCategoryFragment();
+                    fragment.setArguments(bundle);
+
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.subCategory, fragment,"dining_and_drinking")
+                            .commit();
+
+                    View overlay=findViewById(R.id.overlay);
+                    overlay.setVisibility(View.VISIBLE);
+
                 }
             }
         });
@@ -163,6 +169,17 @@ public class MainActivity extends AppCompatActivity {
                     entertainmentLL.setBackground(drawable1);
                     isEntertainmentClicked = false;
                     isDiningClicked = false;
+
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("key", 2);
+
+                    SubCategoryFragment fragment = new SubCategoryFragment();
+                    fragment.setArguments(bundle);
+
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.subCategory, fragment,"landmarks_and_outdoors")
+                            .commit();
+
                 }
             }
         });
@@ -184,6 +201,17 @@ public class MainActivity extends AppCompatActivity {
                     landmarksAndOutdoorsLL.setBackground(drawable1);
                     isLandmarkClicked = false;
                     isDiningClicked = false;
+
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("key", 3);
+
+                    SubCategoryFragment fragment = new SubCategoryFragment();
+                    fragment.setArguments(bundle);
+
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.subCategory, fragment,"entertainment")
+                            .commit();
+
                 }
             }
         });
@@ -258,4 +286,17 @@ public class MainActivity extends AppCompatActivity {
         }
         return greeting;
     }
+
+    @Override
+    public void onBackPressed() {
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag("dining_and_drinking");
+
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction().remove(fragment).commit();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+
 }
