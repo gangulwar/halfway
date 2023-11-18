@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Halfway!</string>
+    <string name="title">HalfWay!</string>
     <string name="goodMorning">Good Morning,</string>
     <string name="goodAfternoon">Good Afternoon,</string>
     <string name="location">Location</string>
@@ -16,7 +17,8 @@
     <string name="type">(Type)</string>
     <string name="distance_from">Distance from Middle Point</string>
     <string name="distance_meters">100 Meters</string>
-    <string name="view_map">View On Map</string>
+<!--    <string name="view_map">View On Map</string>-->
+    <string name="view_map">Get Directions</string>
     <string name="select_location">Select A Location</string>
 
     <!--  dining and drinking fragment  -->
@@ -42,7 +44,7 @@
     <string name="category_italian">Italian</string>
     <string name="category_mexican">Mexican</string>
 
-    <string name="restaurant">Restaurant</string>
+    <string name="restaurant">Restaurants</string>
 
     <!--  Landmarks and Outdoors  -->
     <string name="category_canal">Canal</string>
@@ -58,5 +60,30 @@
     <string name="category_park">Park</string>
     <string name="category_river">River</string>
     <string name="category_structure">Structure</string>
+
+    <!--    Entertainment -->
+    <string name="category_amusement_park">Amusement Park</string>
+    <string name="category_arcade">Arcade</string>
+    <string name="category_casino">Casino</string>
+    <string name="category_comedy_club">Comedy Club</string>
+    <string name="category_fair">Fair</string>
+    <string name="category_movie_theater">Movie Theater</string>
+    <string name="category_museum">Museum</string>
+    <string name="category_night_club">Night Club</string>
+    <string name="category_gaming_cafe">Gaming Cafe</string>
+    <string name="category_pool_hall">Pool Hall</string>
+    <string name="category_vr_cafe">VR Cafe</string>
+    <string name="category_water_park">Water Park</string>
+    <string name="category_zoo">Zoo</string>
+
+    <string name="done">Done</string>
+
+    <string name="developed_by">Developed By</string>
+    <string name="aarsh_gangulwar">Aarsh Gangulwar</string>
+    <string name="select_all">Select All</string>
+
+    <!--    Navigation Drawer-->
+    <string name="find_places_near">Find Places Near Your Location</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

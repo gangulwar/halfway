@@ -1,374 +1,358 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/card"
-    tools:context=".SubCategoryFragment"
-    >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/dm_sans_bold"
-            android:text="@string/diningAndDrinking"
-            android:textSize="55sp" />
-
-        <View
-            android:layout_width="275dp"
-            android:layout_height="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="8dp"
-            android:background="@android:color/black" />
+    tools:context=".SubCategoryFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_bar"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/diningAndDrinking"
+                android:textSize="55sp" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="(You can select Multiple Categories)"
+                android:textSize="15dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_bar"
-                android:textSize="25sp" />
+                android:fontFamily="@font/dm_sans"/>
+            <View
+                android:layout_width="275dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/black" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_bakery"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_bar"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_bakery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_bakery"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_cafe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_cafe"
+                    android:textSize="25sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_coffee_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_coffee_shop"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_tea_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_tea_room"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_cafeteria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_cafeteria"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_dessert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_dessert_shop"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
+                android:layout_margin="15dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_bakery"
-                android:textSize="25sp" />
+                android:text="@string/restaurant"
+                android:textSize="55sp" />
+
+            <View
+                android:layout_width="275dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_afgan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_afgan"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_african"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_african"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_american"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="5dp"
+                    android:text="@string/category_american"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_asian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_asian"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_australian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_australian"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_chinese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_chinese"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_dutch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_dutch"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_french"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="5dp"
+                    android:text="@string/category_french"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_indian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_indian"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_italian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="10dp"
+                    android:text="@string/category_italian"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_mexican"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/fragment_button_before"
+                    android:checked="false"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:padding="5dp"
+                    android:text="@string/category_mexican"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_cafe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_cafe"
+                android:padding="15dp"
+                android:text="@string/done"
                 android:textSize="25sp" />
 
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_coffee_shop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_coffee_shop"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_tea_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_tea_room"
-                android:textSize="25sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_cafeteria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_cafeteria"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_dessert"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_dessert_shop"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:fontFamily="@font/dm_sans_bold"
-            android:text="@string/restaurant"
-            android:textSize="55sp" />
-
-        <View
-            android:layout_width="275dp"
-            android:layout_height="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="8dp"
-            android:background="@android:color/black" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_afgan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_afgan"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_african"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_african"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_american"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="5dp"
-                android:text="@string/category_american"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_asian"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_asian"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_australian"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_australian"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_bangladeshi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_bangladeshi"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_chinese"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_chinese"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_dutch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_dutch"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_fast_food"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_fast_food"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_french"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="5dp"
-                android:text="@string/category_french"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="15dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_indian"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_indian"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_italian"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="10dp"
-                android:text="@string/category_italian"
-                android:textSize="25sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_mexican"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:background="@drawable/fragment_button_before"
-                android:checked="false"
-                android:fontFamily="@font/dm_sans_bold"
-                android:padding="5dp"
-                android:text="@string/category_mexican"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
 </FrameLayout>

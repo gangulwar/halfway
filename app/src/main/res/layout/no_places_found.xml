@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/no_places_found"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/cringe"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:id="@+id/cringe_gif"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nahi hai bhai tere ghar ke pass kuch"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/dm_sans_bold"
+        android:gravity="center"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

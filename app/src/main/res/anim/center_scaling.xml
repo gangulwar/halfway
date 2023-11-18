@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!-- res/anim/opening_animation.xml -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+
+    <translate
+        android:duration="500"
+        android:fromXDelta="-100%p"
+        android:fromYDelta="0%p"
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:toXDelta="0%p"
+        android:toYDelta="-100%p"
+        />
+    <!--    <scale-->
+    <!--        android:duration="10000"-->
+    <!--        android:fromXScale="1.0"-->
+    <!--        android:toXScale="1.2"-->
+    <!--        android:fromYScale="1.0"-->
+    <!--        android:toYScale="1.2"-->
+    <!--        android:pivotX="50%"-->
+    <!--        android:pivotY="50%"-->
+    <!--        />-->
+
+    <!-- Step 2: Opening Animation -->
+    <!--    <scale-->
+    <!--        android:duration="500"-->
+    <!--        android:fromXScale="0.5"-->
+    <!--        android:fromYScale="0.5"-->
+    <!--        android:pivotX="50%"-->
+    <!--        android:pivotY="50%"-->
+    <!--        android:toXScale="1.0"-->
+    <!--        android:toYScale="1.0" />-->
+
+    <!--    &lt;!&ndash; Step 3: Scaling Animation &ndash;&gt;-->
+    <!--    <scale-->
+    <!--        android:duration="500"-->
+    <!--        android:fromXScale="1.0"-->
+    <!--        android:fromYScale="1.0"-->
+    <!--        android:pivotX="50%"-->
+    <!--        android:pivotY="50%"-->
+    <!--        android:startOffset="500"-->
+    <!--        android:toXScale="1.5"-->
+    <!--        android:toYScale="1.5" />-->
+
+    <!--    &lt;!&ndash; Optional: Closing Animation (Reverse of Opening) &ndash;&gt;-->
+    <!--    &lt;!&ndash; Uncomment and adjust if needed &ndash;&gt;-->
+    <!--    &lt;!&ndash;-->
+    <!--    <scale-->
+    <!--        android:startOffset="1000"  &lt;!&ndash; Start closing after scaling animation &ndash;&gt;-->
+    <!--    android:duration="500"-->
+    <!--    android:fromXScale="1.5"-->
+    <!--    android:fromYScale="1.5"-->
+    <!--    android:toXScale="0.5"-->
+    <!--    android:toYScale="0.5"-->
+    <!--    android:pivotX="50%"-->
+    <!--    android:pivotY="50%"/>-->
+    <!--    &ndash;&gt;-->
+</set>

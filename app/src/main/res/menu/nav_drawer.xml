@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <group
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/diningNavDrawer"
+            android:icon="@drawable/dining_and_drinking"
+            android:title="@string/diningAndDrinking"/>
+
+        <item
+            android:id="@+id/landmarksNavDrawer"
+            android:icon="@drawable/landmark"
+            android:title="@string/landmarksAndOutdoors"/>
+
+        <item
+            android:id="@+id/entertainmentDrawer"
+            android:icon="@drawable/entertainment"
+            android:title="@string/entertainment"/>
+
+    </group>
+
+<!--    <item-->
+<!--        android:title="About"-->
+<!--        >-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="aboutNavDrawer"-->
+<!--                android:icon="@drawable/i_button"-->
+<!--                android:title="About"/>-->
+
+<!--        </menu>-->
+<!--    </item>-->
+</menu>

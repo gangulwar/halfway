@@ -13,9 +13,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.ViewHolder> {
     Context context;
@@ -45,11 +47,24 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
         String typeOfPlace = arrayList.get(position).typeOfPlace;
         String distanceFromMiddle = arrayList.get(position).distance + " meters";
 
-        Picasso.get()
-                .load(imageUrl)
-                .placeholder(R.drawable.loading)
-                .error(R.drawable.loading)
-                .into(holder.icon);
+        if (Objects.equals(imageUrl, "Error")) {
+            Glide.with(context)
+                    .asGif()
+                    .load(R.drawable.cringe)
+                    .into(holder.icon);
+        } else if (Objects.equals(nameOfPlace, "Error")) {
+            Glide.with(context)
+                    .asGif()
+                    .load(imageUrl)
+                    .into(holder.icon);
+        } else {
+
+            Picasso.get()
+                    .load(imageUrl)
+                    .placeholder(R.drawable.loading)
+                    .error(R.drawable.loading)
+                    .into(holder.icon);
+        }
 
 //        if (nameOfPlace.length() > 15) {
 //            holder.name.setTextSize(TypedValue.COMPLEX_UNIT_SP, 26);
@@ -84,6 +99,12 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
             }
         });
 
+        holder.shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                share(arrayList.get(position));
+            }
+        });
     }
 
     @Override
@@ -98,6 +119,7 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
         TextView type;
         TextView distance;
         TextView viewOnMap;
+        ImageView shareButton;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -107,7 +129,9 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
             type = itemView.findViewById(R.id.typeOfPlace);
             distance = itemView.findViewById(R.id.distanceFromMiddle);
             viewOnMap = itemView.findViewById(R.id.viewMap);
+            shareButton = itemView.findViewById(R.id.share_button);
         }
+
     }
 
     public static void changeTextSize(TextView textView, String text, int flag) {
@@ -120,5 +144,26 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
                 textView.setTextSize(18);
             }
         }
+    }
+
+    public void share(PlaceModal placeModal) {
+
+        String nameOfPlace = placeModal.nameOfPlace;
+        String address = placeModal.address.replace(" ", "+");
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+//        placeModal.lat;
+//        placeModal.lon;
+        //String link = "https://www.google.com/maps?saddr&daddr=" + placeModal.lat + "," + placeModal.lon;
+        String locationLink = "https://www.google.com/maps/dir/?api=1&destination=" + address;
+
+        String message = "Hey! Lets meet here today \nPlace Name = " + nameOfPlace + "\nAddress = " + address.replace("+", " ") + "\nView on Google Maps = " + locationLink + "\nSearched on Halfway!\n\t ~By Aarsh Gangulwar";
+        shareIntent.setType("text/plain");
+        String textToShare = "Hello, this is the text I want to share!";
+        shareIntent.putExtra(Intent.EXTRA_TEXT, message);
+
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, nameOfPlace);
+
+        context.startActivity(Intent.createChooser(shareIntent, "Share via"));
+
     }
 }

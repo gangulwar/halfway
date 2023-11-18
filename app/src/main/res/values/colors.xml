@@ -10,4 +10,8 @@
     <color name="track_color">#C4C4C4</color>
     <color name="blue">#0B40FF</color>
     <color name="transparent">#CC3E3E</color>
+    <color name="inactive_track">#747183</color>
+    <color name="active_track">#624CE7</color>
+    <color name="thumb_track">#FFF2F2</color>
+    <color name="main_background">#C9C9C9</color>
 </resources>
