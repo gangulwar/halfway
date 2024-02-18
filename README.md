@@ -13,4 +13,4 @@ The app utilizes the following APIs:
 - **Google Maps API**: Utilized for selecting locations.
 
 ## Demo
-![Video demonstration](/media/halfway.gif)
+<img src="/media/halfway.gif" alt="Video demonstration" width="300">
